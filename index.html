@@ -1,4 +1,244 @@
-<div class="row">
-		<h1>Saran Bhardwaj-Lock</h1>
-</div>
+<head>
+<style>
 
+
+.item {
+		background-color: DimGray;
+		font-family: "Monospace";
+		box-shadow: 5px 10px 8px #888888;
+}
+
+.item:hover {
+		transform: scale(1.1)
+}
+
+.text {
+		color: LemonChiffon;
+}
+
+a, a:hover, a:visited, a:active {
+		color: inherit;
+}
+
+img {
+		padding-top: 15px;
+		padding-bottom: 15px;
+}
+
+img:hover {
+		transform: scale(1.1);
+}
+
+.row {
+		width: 1000px;
+		padding: 10px;
+
+}
+
+.column {
+		padding-left: 10px;
+		padding-right: 10px;
+}
+
+
+.float-left {
+		float: left;
+}
+
+#column0 {
+}
+
+#column1 {
+		width: 35%;
+}
+
+#column2 {
+		width: 20%;
+}
+
+#column3 {
+		width: 20%;
+}
+
+#item0 {
+		width: fit-content;
+		position: relative;
+		left: 30%;
+		padding-left: 20px;
+		padding-top: 1px;
+		padding-right: 20px;
+		padding-bottom: 1px;
+}
+
+#item1 {
+		position: relative;
+		left: 30%;
+		width: 200px;
+		padding-left: 20px;
+		padding-top: 1px;
+		padding-right: 20px;
+		padding-bottom: 1px;
+}
+
+#item2 {
+		position: relative;
+		width: 162px;
+		padding-left: 20px;
+		padding-top: 1px;
+		padding-right: 20px;
+		padding-bottom: 1px;
+
+}
+
+#item3 {
+		position: relative;
+		width: 200px;
+		padding-left: 20px;
+		padding-top: 1px;
+		padding-right: 20px;
+		padding-bottom: 1px;
+		top: 20px;
+}
+
+#item4 {
+		position: relative;
+		width: 220px;
+		padding-left: 20px;
+		padding-top: 1px;
+		padding-right: 20px;
+		padding-bottom: 1px;
+}
+
+#item5 {
+		position: relative;
+		left: 20%;
+		width: 200px;
+		padding-left: 20px;
+		padding-top: 1px;
+		padding-right: 20px;
+		padding-bottom: 1px;
+		top: 20px;
+}
+</style>
+</head>
+
+
+<body>
+		<div class="container">
+				<div class="row">
+						<div class="column" id="column0">
+								<div class="item" id="item0">
+										<h3 class="text">Welcome, <a id="greeting"></a></h3>
+								</div>
+						</div>
+				</div>
+				<div class="row">
+						<div class="column float-left" id="column1">
+								<div class="item" id="item1">
+										<h3 class="text">About Me</h3>
+										<p class="text">I am a student about to start a
+										Computer Science degree at the 
+										University of Edinburgh. My main 
+										interests are in the foundations of CS 
+										but I also enjoy making cool stuff!</p>
+								</div>
+						</div>
+						<div class="column float-left" id="column2">
+								<div class="item" id="item2">
+										<h3 class="text">Saran Bhardwaj-<br>Lock</h3>
+								</div>
+								<div class="item" id="item3">
+										<h3 class="text">Good Sources of Information (imo)</h3>
+										<ul class="text">
+												<li>
+														News:
+														<ol>
+																<li><a href="https://www.bbc.co.uk/">BBC</a></li>
+																<li><a href="https://www.newscientist.com/">New Scientist</a></li>
+														</ol>
+												</li>
+												<br>
+												<li>
+														Programming:
+														<ol>
+																<li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
+																<li><a href="https://dev.to/">Dev.to</a></li>
+														</ol>
+
+												</li>
+										</ul>
+
+								</div>
+						</div>
+						<div class="column float-left" id="column3">
+								<div class="item" id="item4">
+										<a href="https://github.com/saranblock3">
+												<img src="/GitHub-Mark/PNG/GitHub-Mark-64px.png">
+										</a>
+										<a href="https://www.facebook.com/saran.bhardwajlock.7">
+												<img src="/Facebook-Mark/fb-icon.png">
+										</a>
+										<a href="https://www.youtube.com/channel/UC1H_3E-dexrxqJF51CaFDFw">
+												<img src="/Youtube-Mark/youtube_full_color_icon/social/64px/red/youtube_social_circle_red.png">
+										</a>
+
+								</div>
+								<div class="item" id="item5">
+										<h3 class="text">Stuff I Use</h3>
+										<ul class="text">
+												<li>
+														Text editor:
+														<ol>
+																<li>Neovim</li>
+																<li>VS Code</li>
+														</ol>
+												</li>
+												<br>
+												<li>
+														Languages:
+														<ol>
+																<li>Python</li>
+																<li>Rust</li>
+																<li>Java</li>
+														</ol>
+
+												</li>
+										</ul>
+								</div>
+						</div>
+				</div>
+				<div class="row">
+						<div class="column">
+						</div>
+				</div>
+				<div class="row">
+						<div class="column">
+						</div>
+				</div>
+				<div class="row">
+						<div class="column">
+						</div>
+				</div>
+		</div>
+</body>
+
+<script>
+		var titles = ["Human",
+				"Friend",
+				"Stranger",
+				"Alien",
+				"Enemy",
+				"Boris",
+				"Animal",
+				"Me?",
+		];
+		var i = 0;
+		var greeting = document.getElementById("greeting");
+		greeting.innerHTML = titles[2];
+
+		setInterval(function(){ 
+				greeting.innerHTML = titles[i];
+				i = Math.floor(Math.random() * titles.length);
+		}, 1000);
+
+</script>
